@@ -20,7 +20,7 @@ You can launch the image using the docker command line, suppose you have prepare
 
     docker run --name='aosp-v5' -it --rm \
     -v ~/AOSP:/home/android/aosp \
-    tedwang/aosp-v5 \
+    tedwang/docker-aosp-v5 \
     /bin/bash
 
 The /home/android/aosp is the mounted point inside the container.
