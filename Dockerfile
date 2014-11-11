@@ -6,7 +6,7 @@ MAINTAINER tedwang.tw@gmail.com
 # fundamental packages
 #
 RUN apt-get update \
-	&& apt-get install -y curl vim git
+	&& apt-get install -y curl vim git man-db
 # optional
 #RUN apt-get install -y wget sudo net-tools 
 
@@ -46,7 +46,8 @@ RUN echo export PS1="$PS1" >> ~/.bashrc
 # AOSP Repo tool
 #
 RUN mkdir ~/bin
-RUN echo "export PATH=~/bin:\$PATH" >> ~/.bashrc
+#RUN echo "export PATH=~/bin:\$PATH" >> ~/.bashrc
+ENV PATH ~/bin:$PATH
 
 RUN curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 RUN chmod a+x ~/bin/repo
