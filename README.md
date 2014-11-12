@@ -6,7 +6,7 @@ Docker image for building [Android Open Source Project (AOSP)](https://android.g
 Note: For older versions, e.g. KitKat, please check [tedwang-tw/docker-aosp-v4](https://github.com/tedwang-tw/docker-aosp-v4 "tedwang-tw/docker-aosp-v4").
 
 ## Installation ##
-Pull the image from the [docker hub](https://registry.hub.docker.com/u/tedwang/docker-aosp-v5/ "docker hub"). This is the recommended method of installation as it is easier to update image.
+Pull the image from the [Docker Hub](https://registry.hub.docker.com/u/tedwang/docker-aosp-v5/ "Docker Hub"). This is the recommended method of installation as it is easier to update image.
 
 
     docker pull tedwang/docker-aosp-v5:latest
@@ -27,6 +27,16 @@ You can launch the image using the docker command line, suppose you have prepare
 
 The /home/android/aosp is the mounted point inside the container.
 
+After entering the container, you can operate as the normal developing:
+
+    0 android@ ~/aosp $ git config --global user.email "name@example.com"
+    0 android@ ~/aosp $ git config --global user.name "My Name"
+    0 android@ ~/aosp $ repo init -u https://android.googlesource.com/platform/manifest
+    0 android@ ~/aosp $ repo sync
+    0 android@ ~/aosp $ source build/envsetup.sh
+    0 android@ ~/aosp $ lunch ......
+
+
 ## Pre-Configured ##
 - Ubuntu 14.04
 - Default user account: name=android, password=android
@@ -35,3 +45,4 @@ The /home/android/aosp is the mounted point inside the container.
  
  
 ## Todo ##
+- Setup for ccache
