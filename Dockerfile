@@ -8,6 +8,7 @@ MAINTAINER tedwang.tw@gmail.com
 RUN apt-get update \
 	&& apt-get install -y curl vim git man-db
 # optional
+RUN apt-get install -y make
 #RUN apt-get install -y wget 
 
 #
@@ -15,7 +16,7 @@ RUN apt-get update \
 #
 # Java 7
 RUN apt-get install -y openjdk-7-jdk 
-# GCC 
+# toolchains 
 RUN apt-get install -y bison g++-multilib gperf libxml2-utils
 
 # Clean up
