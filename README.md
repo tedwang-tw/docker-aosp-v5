@@ -18,14 +18,14 @@ Alternately you can build the image locally.
     docker build -t tedwang/docker-aosp-v5 .
     
 ## Usage ##
-You can launch the image using the docker command line, suppose you have prepared a folder for aosp download in the local host, e.g. ~/AOSP/,
+You can launch the image using the docker command line, suppose you have prepared a folder for aosp download in the local host, e.g. **~/AOSP**,
 
     docker run --name='aosp-v5' -it --rm \
     -v ~/AOSP:/home/android/aosp \
     tedwang/docker-aosp-v5 \
     /bin/bash
 
-The /home/android/aosp is the mounted point inside the container.
+The **/home/android/aosp** is the mounted point inside the container.
 
 After entering the container, you can operate as the normal developing:
 
@@ -39,7 +39,7 @@ After entering the container, you can operate as the normal developing:
 
 ## Pre-Configured ##
 - Ubuntu 14.04
-- Default user account: name=android, password=android
+- Default user account: name=**android**, password=**android**
 - Toolchains as from [http://source.android.com/source/initializing.html](http://source.android.com/source/initializing.html)
 - Repo tool as from [http://source.android.com/source/downloading.html](http://source.android.com/source/downloading.html)
  
