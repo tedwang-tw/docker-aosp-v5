@@ -46,8 +46,8 @@ RUN echo export PS1="$PS1" >> ~/.bashrc
 # AOSP Repo tool
 #
 RUN mkdir ~/bin
-#RUN echo "export PATH=~/bin:\$PATH" >> ~/.bashrc
-ENV PATH ~/bin:$PATH
+RUN echo "export PATH=~/bin:\$PATH" >> ~/.bashrc
+#ENV PATH ~/bin:$PATH
 
 RUN curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 RUN chmod a+x ~/bin/repo
