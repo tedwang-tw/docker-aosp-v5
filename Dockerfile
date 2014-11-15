@@ -1,23 +1,15 @@
-FROM ubuntu:14.04
+#
+# We can use either base12 or base14
+#
+FROM tedwang/aosp-base14:latest
 
 MAINTAINER tedwang.tw@gmail.com
-
-#
-# fundamental packages
-#
-RUN apt-get update \
-	&& apt-get install -y curl vim git man-db
-# optional
-RUN apt-get install -y make
-#RUN apt-get install -y wget 
 
 #
 # AOSP requirement depends on android versions
 #
 # Java 7
 RUN apt-get install -y openjdk-7-jdk 
-# toolchains 
-RUN apt-get install -y bison g++-multilib gperf libxml2-utils
 
 # Clean up
 RUN apt-get clean
