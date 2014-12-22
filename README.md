@@ -39,10 +39,12 @@ Once entering the container, you can operate as the normal developing:
     0 android@ ~ $ cd aosp
     0 android@ ~/aosp $ git config --global user.email "name@example.com"
     0 android@ ~/aosp $ git config --global user.name "My Name"
-    0 android@ ~/aosp $ repo init -u https://android.googlesource.com/platform/manifest
+    0 android@ ~/aosp $ repo init -u https://android.googlesource.com/platform/manifest -b android-l-preview_r2
     0 android@ ~/aosp $ repo sync
     0 android@ ~/aosp $ source build/envsetup.sh
     0 android@ ~/aosp $ lunch ......
+
+Note: You should repo the **Lollipop** branch.
 
 ## Pre-Configured ##
 - Ubuntu 14.04
