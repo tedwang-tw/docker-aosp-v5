@@ -9,10 +9,7 @@ MAINTAINER tedwang.tw@gmail.com
 # AOSP requirement depends on android versions
 #
 # Java 7
-RUN apt-get install -y openjdk-7-jdk 
-
-# Clean up
-RUN apt-get clean
+RUN apt-get install -y openjdk-7-jdk && apt-get clean
 
 #
 # user account
